@@ -1,7 +1,9 @@
-# Lógica do algoritmo de Dijsktra
+# Lógica do algoritmo de Dijkstra
 
-Modelo de Trabalho de Conclusão de Curso (TCC), de acordo com a normatização da ABNT exigida no Departamento de Ciência da Computação do Centro Universitário Carioca (UNICARIOCA).
+Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para traçar a menor distância entre dois pontos.
 
-# Contribuidores
+# Códigos:
+- [dijkstra_path_graph) - Gráfo do Algoritmo de Dijkstra
+- [shortest_path_v1) - Utilizando o Algoritmo de Dijkstra traça a menor rota entre localização de 'Origem' e uma ou mais localizações de 'Destino utilizando Latitude e Longitude
+- [shortest_path_v2) - Utilizando o Algoritmo de Dijkstra traça a menor rota entre localização de 'Origem' e uma ou mais localizações de 'Destino utilizando número, nome da rua, nome do bairro, nome da cidade e nome do país.
 
-- [Jonathan Barbosa](https://github.com/BonathanRJ)
