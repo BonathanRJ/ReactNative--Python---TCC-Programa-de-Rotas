@@ -10,7 +10,7 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 - [shortest_path_v2](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/shortest_path_v2.py) - Utilizando o Algoritmo de Dijkstra traça a menor rota entre localização de 'Origem' e uma ou mais localizações de 'Destino utilizando número, nome da rua, nome do bairro, nome da cidade e nome do país.
 
 
-## Requerimentos
+### Requerimentos
 
 <pre>
 #networkx==3.1  - Conexão entre pares de entidades (nós) através de arestas.
@@ -23,17 +23,14 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 </pre>   
 
 
-### dijkstra_path_graph
+## dijkstra_path_graph
 
 | Grafo                                                                                                                                    | Representa as distâncias entre os nós do grafo.                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/d7a5c054-25c6-4d1e-8a20-7f624bb70a2c" alt="Grafo Image"> | <img src="https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/cbb7d391-e41f-4176-a587-bc3b0c9a788c" alt="Distâncias Image"> |
-|                                                                                                                                          |                                                                                                                                               |
-|                                                                                                                                          |                                                                                                                                               |
 
 Calcula o caminho mínimo usando o algoritmo de Dijkstra e determina os arcos no caminho mínimo e define suas cores.
 ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/8527ba07-ae5c-4118-96eb-65547840cd93)
-
 
 | Interface para receber o 'Nó Inicial' e 'Nó Final'.                                                                  | Grafo com o resultado do menor caminho entre o 'Nó Inicial' e o 'Nó Final'.                                          |
 |----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
