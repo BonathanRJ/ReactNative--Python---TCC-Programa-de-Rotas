@@ -13,13 +13,13 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 ### Requerimentos
 
 <pre>
-#networkx==3.1  - Conexão entre pares de entidades (nós) através de arestas.
-#numpy==1.26.1 - Operações eficientes em matrizes.
-#matplotlib==3.8.0 - Plota o grafo.
-#folium==0.14.0 - Criação de mapas interativos com Leaflet.js.
-#geopy==2.4.0 - Cálcula a distância entre pontos geográficos.
-#nominatim==0.1 - Converte endereços em coordenadas geográficas.
-#osmnx==1.7.0  - Cria grafos de ruas direcionados.
+#networkx==3.1       - Conexão entre pares de entidades (nós) através de arestas.
+#numpy==1.26.1       - Operações eficientes em matrizes.
+#matplotlib==3.8.0   - Plota o grafo.
+#folium==0.14.0      - Criação de mapas interativos com Leaflet.js.
+#geopy==2.4.0        - Cálcula a distância entre pontos geográficos.
+#nominatim==0.1      - Converte endereços em coordenadas geográficas.
+#osmnx==1.7.0        - Cria grafos de ruas direcionados.
 </pre>   
 
 
