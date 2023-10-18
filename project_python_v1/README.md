@@ -13,5 +13,11 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 ## Requerimentos
 
 <pre>
-#networkx==3.1                #numpy==1.26.0                #matplotlib==3.8.0              #folium==0.12.1
+#networkx==3.1            #numpy==1.26.1            #matplotlib==3.8.0
+#folium==0.14.0           #geopy==2.4.0             #nominatim==0.1  
+#osmnx==1.7.0  
 </pre>   
+
+#dijkstra_path_graph
+##dijkstra_path_graph
+###dijkstra_path_graph
