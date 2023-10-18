@@ -3,11 +3,11 @@
 Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para traçar a menor distância entre dois pontos.
 
 # Códigos Python:
-- [dijkstra_path_graph](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/dijkstra_path_graph.py) - Gráfo do Algoritmo de Dijkstra
+- [dijkstra_path_graph](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/dijkstra_path_graph.py) - Gráfo do Algoritmo de Dijkstra.
 
-- [shortest_path_v1](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/shortest_path_v1.py) - Utilizando o Algoritmo de Dijkstra traça a menor rota entre localização de 'Origem' e uma ou mais localizações de 'Destino utilizando Latitude e Longitude
+- [shortest_path_v1](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/shortest_path_v1.py) - Utilizando o Algoritmo de Dijkstra para traçar a menor rota entre coordenada de 'Origem' e uma ou mais coordenadas de 'Destino utilizando Latitude e Longitude.
 
-- [shortest_path_v2](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/shortest_path_v2.py) - Utilizando o Algoritmo de Dijkstra traça a menor rota entre localização de 'Origem' e uma ou mais localizações de 'Destino utilizando número, nome da rua, nome do bairro, nome da cidade e nome do país.
+- [shortest_path_v2](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/blob/main/project_python_v1/shortest_path_v2.py) - Utilizando o Algoritmo de Dijkstra para traçar a menor rota entre um endereço de 'Origem' e uma ou mais endereços de 'Destino' utilizando número, nome da rua, nome do bairro, nome da cidade e nome do país.
 
 
 ### Requerimentos
