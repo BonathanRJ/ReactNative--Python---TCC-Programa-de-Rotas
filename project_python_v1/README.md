@@ -39,7 +39,7 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 </div>
 
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-between; flex-direction: column;">
 
   <div style="width: 48%; border: 1px solid #ccc; padding: 10px;">
     <p>Conteúdo do Contêiner 1</p>
