@@ -27,6 +27,7 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 <div style="display: inline_block">
 Grafo.
+  
 ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/d7a5c054-25c6-4d1e-8a20-7f624bb70a2c)
 </div>
 
