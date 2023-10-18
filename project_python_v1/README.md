@@ -25,7 +25,7 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 ### dijkstra_path_graph
 
-<div style="display: flex; flex-direction: column;">
+<div style="display: flex; flex-direction: row;">
 
   <div style="margin: 10px;">
     <p>Grafo</p>
