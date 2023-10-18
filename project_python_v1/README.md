@@ -24,12 +24,17 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 
 ### dijkstra_path_graph
+<div>
+  <div>
+    Grafo.
+    ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/d7a5c054-25c6-4d1e-8a20-7f624bb70a2c)
+  </div>
+  <div>
+    Representa as distâncias entre os nós do grafo. 
+    ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/cbb7d391-e41f-4176-a587-bc3b0c9a788c)
+  </div>
+</div>
 
-Grafo.
-![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/d7a5c054-25c6-4d1e-8a20-7f624bb70a2c)
-
-Representa as distâncias entre os nós do grafo. 
-![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/cbb7d391-e41f-4176-a587-bc3b0c9a788c)
 
 Calcula o caminho mínimo usando o algoritmo de Dijkstra e determina os arcos no caminho mínimo e define suas cores.
 ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/8527ba07-ae5c-4118-96eb-65547840cd93)
