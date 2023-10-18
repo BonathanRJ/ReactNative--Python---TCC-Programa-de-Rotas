@@ -41,6 +41,7 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 
 
+
 Calcula o caminho mínimo usando o algoritmo de Dijkstra e determina os arcos no caminho mínimo e define suas cores.
 ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/8527ba07-ae5c-4118-96eb-65547840cd93)
 
