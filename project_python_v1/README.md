@@ -42,7 +42,7 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 | Interface para receber Latitude e Longitude de Origem, permite preencher quantos Destinos vai querer e preencher a Latitude e Longitude do(s) Destino(s) |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/5967e72d-c320-47c0-8e14-8b3383f7cbea)                                     |
+| ![image](![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/faba96f3-eae5-4e53-afba-029817d970a1)                            |
 
 | Função 'gerar_caminho' é acionada recebendo as informações da tela                                                   |
 |----------------------------------------------------------------------------------------------------------------------|
@@ -51,4 +51,27 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 | Função 'generate_path' obtem os caminhos.                                                                            |
 |----------------------------------------------------------------------------------------------------------------------|
 | ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/bd6fbb94-1d32-4803-a43b-fe79fff4b8cd) |
+
+| Função 'plot_map' para plotar o mapa usando a biblioteca Folium.                                                     |
+|----------------------------------------------------------------------------------------------------------------------|
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/0cc095ce-b7c7-42e9-b8a6-447c7f3bbb8a) |
+
+
+## shortest_path_v2.py
+
+| Interface para receber um endereço de origem e diversos endereços de destino. Os endereços deverão ser no formato: Número da rua, Nome da Rua, Nome do Bairro, Nome da Cidade e Nome do País, todos separados por ','. |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/c9d8deab-8963-416e-89d5-a2c412840a6d)                                                                                                   |
+
+| Função 'get_coordinates_from_address' obtém coordenadas geográficas a partir de um endereço usando o serviço Nominatim. |
+|-------------------------------------------------------------------------------------------------------------------------|
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/adb89321-4fe6-46e4-b97e-9893b6c5c1a5)    |
+
+| Função 'generate_path' gera o caminho mais curto entre um ponto de origem e múltiplos destinos usando dados do OpenStreetMap. |
+|-------------------------------------------------------------------------------------------------------------------------------|
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/486ae9d4-4264-465e-8bf6-f5062730a6fe)          |
+
+| Função 'plot_map' para plotar o mapa usando a biblioteca Folium.                                                     |
+|----------------------------------------------------------------------------------------------------------------------|
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/14b6e1b2-3907-405c-ac7b-152046ec29d3) |
 
