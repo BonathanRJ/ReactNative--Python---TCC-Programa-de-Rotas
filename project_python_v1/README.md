@@ -25,24 +25,24 @@ Mostrando em python um exemplo de como esse algoritmo pode ser utilizado para tr
 
 ## dijkstra_path_graph
 
-| Grafo                                                                                                                                    | Representa as distâncias entre os nós do grafo.                                                                                               |
-|------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/d7a5c054-25c6-4d1e-8a20-7f624bb70a2c" alt="Grafo Image"> | <img src="https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/cbb7d391-e41f-4176-a587-bc3b0c9a788c" alt="Distâncias Image"> |
+| Grafo                                                                                                                | Matriz das distâncias entre os nós do grafo.                                                                         |
+|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/9ea9697f-eb90-465c-bc8a-cd8150994ffd) | ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/f993c0af-3031-4270-bfd3-2611e4602c82) |
 
-| Calcula o caminho mínimo usando o algoritmo de Dijkstra e determina os arcos no caminho mínimo e define suas cores.  |
+| Função para calcular o caminho mínimo usando o algoritmo de Dijkstra e determina os arcos no caminho mínimo e define suas cores.  |
 |----------------------------------------------------------------------------------------------------------------------|
-| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/8527ba07-ae5c-4118-96eb-65547840cd93) |
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/e7f4a027-1189-4fd9-affd-4bd756a69280) |
 
 | Interface para receber o 'Nó Inicial' e 'Nó Final'.                                                                  | Grafo com o resultado do menor caminho entre o 'Nó Inicial' e o 'Nó Final'.                                          |
 |----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/05172cc6-4307-4950-929e-d6435b0579df) | ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/118b02fe-467b-4453-8563-eb24505077fb) |
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/5da62040-a4c2-4cd0-942f-08d9c112d820) | ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/118b02fe-467b-4453-8563-eb24505077fb) |
 
 
 ## shortest_path_v1.py
 
 | Interface para receber Latitude e Longitude de Origem, permite preencher quantos Destinos vai querer e preencher a Latitude e Longitude do(s) Destino(s) |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![image](![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/faba96f3-eae5-4e53-afba-029817d970a1)                            |
+| ![image](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/faba96f3-eae5-4e53-afba-029817d970a1)                                     |
 
 | Função 'gerar_caminho' é acionada recebendo as informações da tela                                                   |
 |----------------------------------------------------------------------------------------------------------------------|
