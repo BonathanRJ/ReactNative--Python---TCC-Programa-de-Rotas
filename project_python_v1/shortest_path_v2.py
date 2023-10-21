@@ -1,6 +1,6 @@
 import os
-import networkx as nx
-import osmnx as ox
+import networkx as nx 
+import osmnx as ox 
 import folium 
 from geopy.geocoders import Nominatim
 import tkinter as tk
@@ -63,9 +63,9 @@ def generate_path(origem_numero, origem_nome_rua, origem_bairro, origem_cidade, 
     estradas = ox.graph_from_bbox(norte + perimetro, sul - perimetro, leste + perimetro, oeste - perimetro,
                                    network_type=modo, simplify=False)
 
-    origem_no = ox.get_nearest_node(estradas, origem_ponto)
+    origem_no = ox.nearest_nodes(estradas, origem_ponto[1], origem_ponto[0])
 
-    destinos_nos = [ox.get_nearest_node(estradas, destino_ponto) for destino_ponto in destinos_pontos]
+    destinos_nos = [ox.nearest_nodes(estradas, destino_ponto[1], destino_ponto[0]) for destino_ponto in destinos_pontos]
 
     caminhos = []
     for destino_no in destinos_nos:
@@ -92,7 +92,7 @@ def plot_map(origem_ponto, destinos_pontos, caminhos, estradas):
 
         folium.Marker(location=destinos_pontos[i], popup="Destino", icon=folium.Icon(color='red')).add_to(m)
 
-    m.save(os.path.join(OS_PATH, 'project_v1', 'saida', 'endereço.html'))
+    m.save(os.path.join(OS_PATH, 'project_python_v1', 'saida', 'endereço.html'))
 
 # Função para adicionar dinamicamente campos de entrada para destino
 def add_destination_entry():

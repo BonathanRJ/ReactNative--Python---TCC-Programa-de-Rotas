@@ -1,6 +1,6 @@
-import networkx as nx #networkx==3.1
-import numpy as np #numpy==1.26.0
-import matplotlib.pylab as plt #matplotlib==3.8.0
+import networkx as nx 
+import numpy as np 
+import matplotlib.pylab as plt
 import tkinter as tk
 from tkinter import Label, Entry, Button
 

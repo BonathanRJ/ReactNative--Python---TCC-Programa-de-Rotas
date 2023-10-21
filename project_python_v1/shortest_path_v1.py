@@ -4,9 +4,9 @@ from PIL import Image, ImageTk
 import requests
 from io import BytesIO
 import os
-import networkx as nx
-import osmnx as ox
-import folium
+import networkx as nx 
+import osmnx as ox 
+import folium 
 
 # Obter o diretório atual do script
 OS_PATH = os.path.dirname(os.path.abspath('__file__'))
@@ -42,13 +42,13 @@ def generate_path(origem_ponto, destino_ponto, perimetro):
 
     # Gráfico da rede de caminhos/estradas definindo os perímetros
     estradas = ox.graph_from_bbox(norte + perimetro, sul - perimetro, leste + perimetro, oeste - perimetro,
-                                   network_type=modo, simplify=False)
+                                  network_type=modo, simplify=False)
     
     # Busca o nó mais próximo no gráfico OSMNX para o ponto de origem
-    origem_no = ox.get_nearest_node(estradas, origem_ponto)
+    origem_no = ox.nearest_nodes(estradas, origem_ponto[1], origem_ponto[0])
 
     # Busca o nó mais próximo no gráfico OSMNX para o ponto de destino
-    destino_no = ox.get_nearest_node(estradas, destino_ponto)
+    destino_no = ox.nearest_nodes(estradas, destino_ponto[1], destino_ponto[0])
 
     # Traçando o menor caminho, utilizando o método 'dijkstra shortest_path'
     rota = nx.shortest_path(estradas, origem_no, destino_no, weight='length', method='dijkstra')
@@ -90,7 +90,7 @@ def plot_map(origem_ponto, destino_pontos, log, lat):
 
     # Salvando o mapa já gerado em um arquivo html
     print("Salvando o mapa...")
-    m.save(os.path.join(OS_PATH, 'project_v1', 'saida', 'coordenadas.html'))
+    m.save(os.path.join(OS_PATH, 'project_python_v1', 'saida', 'coordenadas.html'))
 
 def gerar_caminho():
     try:
