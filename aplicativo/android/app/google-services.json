@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "285045630034",
+    "project_id": "aplicativo-d5c55",
+    "storage_bucket": "aplicativo-d5c55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285045630034:android:3def3cabea443b32f9ab8b",
+        "android_client_info": {
+          "package_name": "com.aplicativo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgrT4uSVe3GharpFn5l_MvR0r9ckaejUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

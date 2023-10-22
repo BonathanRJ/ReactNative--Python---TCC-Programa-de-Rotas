@@ -179,7 +179,7 @@ const MapScreen = ({ route }) => {
 
       <TouchableOpacity
         style={styles.menu}
-        onPress={() => navigation.navigate('Search', { apiKey })}
+        onPress={() => navigation.navigate('Menu')}
       >      
         <Image
           source={require('../../assets/menu.png')}

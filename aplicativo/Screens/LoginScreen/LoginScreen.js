@@ -1,46 +1,66 @@
-import React from 'react';
+// LoginScreen
+import React, {useState} from 'react';
 import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
 
-const EmailInput = () => {
-  return (
-    <View style={styles.inputContainer}>
-      <Image source={require('../../assets/email.png')} style={styles.inputIcon} />
-      <TextInput placeholder="Email" style={styles.input} />
-    </View>
-  );
-};
+export function LoginScreen() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigation = useNavigation();
 
-const PasswordInput = () => {
-  return (
-    <View style={styles.inputContainer}>
-      <Image source={require('../../assets/password.png')} style={styles.inputIcon} />
-      <TextInput placeholder="Senha" style={styles.input} secureTextEntry={true} />
-    </View>
-  );
-};
+  function signIn() {
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('Acesso permitido!');
+        navigation.navigate('Map');
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
 
-const LoginScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
         
       <Image style={styles.login_logo} source={require('../../assets/welcome_waze.png')} />
       <Text style={styles.text}>Bem vindo de volta!</Text>
 
-      <EmailInput />
-      <PasswordInput />
+    <View style={styles.inputContainer}>
+    <Image source={require('../../assets/email.png')} style={styles.inputIcon} />
+      <TextInput
+      placeholder="E-mail" 
+      value={email}
+      onChangeText={setEmail}
+      autoCapitalize="none"
+      placeholderTextColor="#727272"
+      style={styles.input}
+     />
+    </View>
+    <View style={styles.inputContainer}>
+    <Image source={require('../../assets/password.png')} style={styles.inputIcon} />
+    <TextInput
+      placeholder="Senha" 
+      value={password}
+      onChangeText={setPassword}
+      autoCapitalize="none"
+      secureTextEntry
+      placeholderTextColor="#727272"
+      style={styles.input}
+     />
+    </View>
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => {
-          // Implement your login logic here
-        }}
+        onPress={signIn} title="Entrar no App" 
       >
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
         <View style={styles.line_container}>
             <View style={styles.line} />  
-            <Text style={styles.line_text}>OR</Text>
+            <Text style={styles.line_text}>OU</Text>
             <View style={styles.line} />  
         </View>
 
@@ -48,7 +68,7 @@ const LoginScreen = ({ navigation }) => {
         style={styles.button}
         onPress={() => navigation.navigate('Register')}
       >
-        <Text style={styles.buttonText}>Cadastro</Text>
+        <Text style={styles.buttonText}>Cadastrar</Text>
       </TouchableOpacity>
       </View>
   );
