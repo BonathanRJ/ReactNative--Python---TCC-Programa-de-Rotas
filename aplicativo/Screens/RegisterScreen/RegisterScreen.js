@@ -1,12 +1,13 @@
-// RegisterScreen
-import React, {useState} from 'react';
-import {View, Image, TouchableOpacity, StyleSheet, Text, TextInput} from 'react-native';
-import auth from '@react-native-firebase/auth';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Image, StyleSheet, TouchableOpacity, Modal } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
 
 export function RegisterScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState({ code: '', message: '' });
+  const [isAlertVisible, setAlertVisible] = useState(false);
   const navigation = useNavigation();
 
   function signUp() {
@@ -14,31 +15,29 @@ export function RegisterScreen() {
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
         console.log('Conta criada com sucesso!!');
-        navigation.navigate('Map'); 
+        navigation.navigate('Map');
       })
-      .catch(error => {
+      .catch((error) => {
         if (error.code === 'auth/email-already-in-use') {
-          console.log('Esse email já está em uso!'); 
-        }
-
+            setError({
+              code: 'auth/email-already-in-use',
+              message: 'Email já está em uso',
+            });
+            setAlertVisible(true);
+          }
         if (error.code === 'auth/invalid-email') {
-          console.log('Esse email é inválido!'); 
+            setError({
+              code: 'auth/invalid-email',
+              message: 'Email inválido',
+            });
+            setAlertVisible(true);
         }
-
-        console.error(error);
       });
   }
 
-  function signIn() {
-    auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        console.log('user is authenticated');
-        navigation.navigate('Map');
-      })
-      .catch(error => {
-        console.error(error);
-      });
+  function closeAlert() {
+    setAlertVisible(false);
+    setError({ code: '', message: '' });
   }
 
   return (
@@ -78,13 +77,50 @@ export function RegisterScreen() {
         />
       </View>
       
-    <TouchableOpacity
-      style={styles.button}
-      onPress={signUp}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={signUp}
       >
-      <Text style={styles.buttonText}>Cadastrar</Text>
-    </TouchableOpacity>
-  </View>
+        <Text style={styles.buttonText}>Cadastrar</Text>
+      </TouchableOpacity>
+
+      <CustomAlert
+        visible={isAlertVisible}
+        error={error}
+        onClose={closeAlert}
+      />
+    </View>
+  );
+}
+
+function CustomAlert({ visible, error, onClose }) {
+  return (
+    <Modal
+      animationType="fade"
+      transparent={true}
+      visible={visible}
+      onRequestClose={() => onClose()}
+    >
+      <View style={styles.error_container}>
+        <View style={styles.error_transparent} />
+        <View style={styles.error_msg}>
+          <Text style={styles.error_title}>{error.message}</Text>
+          <Text style={styles.error_sub_title}>
+            {error.code === 'auth/email-already-in-use'
+              ? 'Por favor, utilize outro email!'
+              : error.code === 'auth/invalid-email'
+              ? 'Por favor, utilize um email válido!'
+              : ''}
+          </Text>
+          <TouchableOpacity
+            style={styles.error_button}
+            onPress={() => onClose()}
+          >
+            <Text style={styles.error_text}>Fechar</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </Modal>
   );
 }
 
@@ -150,7 +186,52 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
 
   },
-
+  error_container:{
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    
+  },
+  error_transparent:{
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+  error_msg:{
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+    elevation: 10,
+    
+  },
+  error_title:{
+    color: '#0c97ed', 
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  error_sub_title:{
+    color: 'gray', 
+    fontSize: 16,
+    marginTop: 10 ,
+  },
+  error_button:{
+    backgroundColor: '#0c97ed',
+    paddingVertical: 15,
+    paddingHorizontal: 45,
+    alignItems: 'center',
+    marginTop: 25,
+    marginBottom: 10,
+    borderRadius: 15
+  },
+  error_text:{
+    color: 'white', 
+    fontSize: 20, 
+    fontWeight: 'bold',
+  },
 });
 
 export default RegisterScreen;

@@ -13,9 +13,10 @@ export function MenuScreen() {
   }
   return (
     <View >
-      <Text >
-        Essa tela só pode ser vista por usuários autenticados
+      <Text style={styles.text1}>
+        Tela de configuração
       </Text>
+      
       <TouchableOpacity 
         style={styles.button}
         onPress={signOut}
@@ -33,11 +34,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  text1: {
+    fontWeight: 'bold',
+    color: 'black',
+    fontSize: 25,
+    textAlign: 'center',
+    margin: 25
+  },
   button: {
-    backgroundColor: 'orange',
-    borderRadius: 8,
-    padding: 20,
-    minWidth: 150,
+    backgroundColor: '#0c97ed', 
+    borderRadius: 30,
+    padding: 13,
+    width: '60%',
+    alignItems: 'center',
+    margin: 15,
+    alignSelf: 'center'
   },
 });
 

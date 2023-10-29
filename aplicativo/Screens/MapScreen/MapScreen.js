@@ -29,15 +29,12 @@ const MapScreen = ({ route }) => {
     mapRef.current?.animateToRegion(targetRegion, 3000);
   };
 
-  // Variável de estado para controlar a visibilidade do modal
   const [errorModalVisible, setErrorModalVisible] = useState(false);
 
-  // Função para exibir o modal de erro
   const showErrorModal = () => {
     setErrorModalVisible(true);
   };
 
-  // Função para fechar o modal de erro
   const closeErrorModal = () => {
     setErrorModalVisible(false);
   };
@@ -66,16 +63,13 @@ const MapScreen = ({ route }) => {
               title: 'Destino',
             });
 
-            // Busca rotas alternativas
             fetchAlternativeRoutes(location.lat, location.lng, apiKey);
           } else {
-            // Exibir o modal de erro em caso de falha
             showErrorModal();
           }
         })
         .catch((error) => {
           console.error('Erro ao buscar coordenadas:', error);
-          // Exibir o modal de erro em caso de falha
           showErrorModal();
         });
     }
@@ -86,7 +80,6 @@ const MapScreen = ({ route }) => {
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "ZERO_RESULTS") {
-          // Exibir o modal de erro
           showErrorModal();
         } else if (data.routes && data.routes.length > 0) {
           setAlternativeRoutes(data.routes.slice(0, 3));
@@ -94,7 +87,6 @@ const MapScreen = ({ route }) => {
       })
       .catch((error) => {
         console.error('Erro ao buscar rotas alternativas:', error);
-        // Exibir o modal de erro em caso de falha
         showErrorModal();
       });
   };
@@ -202,7 +194,7 @@ const MapScreen = ({ route }) => {
 
         <TouchableOpacity
           style={styles.micButton}
-          onPress={() => {}}
+          onPress={() => navigation.navigate('Search', { apiKey })}
         >
           <Image
             source={require('../../assets/microphone.png')}
@@ -211,7 +203,6 @@ const MapScreen = ({ route }) => {
         </TouchableOpacity>
       </View>
 
-      {/* Modal de erro personalizado */}
       <Modal
         animationType="slide"
         transparent={true}

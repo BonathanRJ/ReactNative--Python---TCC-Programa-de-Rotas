@@ -3,12 +3,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, TextInput } from 'react-native';
 import axios from 'axios'; 
 import { useNavigation } from '@react-navigation/native';
+import Voice from '@react-native-voice/voice';
 
 const SearchScreen = ({ route }) => {
   const navigation = useNavigation();
   const textInputRef = useRef(null);
   const [searchText, setSearchText] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [isListening, setIsListening] = useState(false);
+  const [transcribedText, setTranscribedText] = useState('');
 
   useEffect(() => {
     textInputRef.current.focus();
@@ -20,6 +23,7 @@ const SearchScreen = ({ route }) => {
 
   const handleInputChange = async (text) => {
     setSearchText(text);
+    setTranscribedText(text);
 
     try {
       const apiKey = route.params ? route.params.apiKey : '';
@@ -37,6 +41,31 @@ const SearchScreen = ({ route }) => {
     }
   };
 
+  Voice.onSpeechResults = (e) => {
+    const transcribedText = e.value[0];
+    setTranscribedText(transcribedText);
+    handleInputChange(transcribedText);
+    
+  };
+
+  const startListening = async () => {
+    try {
+      await Voice.start('pt-BR'); 
+      setIsListening(true);
+    } catch (error) {
+      console.error('Error starting voice recognition:', error);
+    }
+  };
+
+  const stopListening = async () => {
+    try {
+      await Voice.stop();
+      setIsListening(false);
+    } catch (error) {
+      console.error('Error stopping voice recognition:', error);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView stickyHeaderIndices={[0]}>
@@ -50,11 +79,20 @@ const SearchScreen = ({ route }) => {
               style={styles.textButton}
               placeholder="Para onde?"
               placeholderTextColor="#696969"
-              value={searchText}
+              value={searchText || transcribedText }
               onChangeText={handleInputChange}
             />
-            <TouchableOpacity style={styles.micButton} onPress={() => {}}>
-              <Image source={require('../../assets/microphone.png')} style={{ width: 20, height: 25 }} />
+            <TouchableOpacity style={styles.micButton} 
+            onPress={() => {
+              if (isListening) {
+                stopListening();
+              } else {
+                startListening();
+              }
+              
+            }}
+            >
+            <Image source={require('../../assets/microphone.png')} style={{ width: 20, height: 25 }} />
             </TouchableOpacity>
           </View>
         </View>
@@ -74,7 +112,7 @@ const SearchScreen = ({ route }) => {
             <View style={styles.container_campo}>
               <View style={styles.container_endereco}>
                 <Text style={styles.suges_Titulo}>{suggestion.structured_formatting.main_text}</Text>
-                <Text style={styles.TextKM}>38 km</Text>
+                
               </View>  
                 <Text style={styles.suges_Desc}>{suggestion.structured_formatting.secondary_text}</Text>
               
