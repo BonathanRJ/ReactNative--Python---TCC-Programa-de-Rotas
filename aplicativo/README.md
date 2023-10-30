@@ -24,7 +24,7 @@ https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/1be62a7e-7
 - Sugestões baseadas na localização do usuário
 - Maior intereratividade com o mapa
 - Mais opções nas configurações
-- Dark mode / Light Mode![Uploading splash_screen.svg…]()
+- Dark mode / Light Mode
 
 - Adicionar pontos de parada parecidos com o do app Uber
 - Montei uma SplashScreen personalizada e gostaria de futuramente incrementar ao app
