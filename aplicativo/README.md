@@ -18,8 +18,8 @@ https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/1be62a7e-7
 - Também há uma tela de configuração que é possível deslogar do usuário usado na tela de Login; ([firebase](https://rnfirebase.io)
 
 # Notas:
-- esse projeto levou 3 semanas , cerca de 70 horas no total.
-- eu gostaria de ter adicionado algumas novas funcionalidades:
+- Esse projeto levou 3 semanas , cerca de 70 horas no total.
+- Eu gostaria de ter adicionado algumas novas funcionalidades:
 - Mais animações na navegação
 - Sugestões baseadas na localização do usuário
 - Maior intereratividade com o mapa
