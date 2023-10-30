@@ -6,14 +6,14 @@ Clone do app Waze utilizando React Native.
 https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/1be62a7e-7396-428d-a073-bacc2bdf0c69
 
 # Principais funcionalidades:
-- Tela de Login; [firebase](https://rnfirebase.io)
-- Tela de Cadastro; [firebase](https://rnfirebase.io)
+- Tela de Login; [Firebase](https://rnfirebase.io)
+- Tela de Cadastro; [Firebase](https://rnfirebase.io)
 - Tela do mapa com um botão para dar zoom para a localização atual; 
 - Tela de pesquisa onde ao digitar aparece sugestões de lugares que você está digitando; [Autocomplete](https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${text}&key=${apiKey}&types=address)
 - Tela de pesquisa onde ao usar o microfone aparece sugestões de lugares que você falou; [Acesso a voz](https://github.com/react-native-voice/voice)
 - Ao selecionar uma das sugestões ele mostrará até três possíveis rotas de origem até o destino selecionado; [Mapa](https://www.npmjs.com/package/react-native-maps)
-- A cor roxa escura é o caminho mais curto entre os dois pontos; 
-- Também há uma tela de configuração que é possível deslogar do usuário usado na tela de Login; [firebase](https://rnfirebase.io)
+- A cor roxa escura é o caminho mais curto entre os dois pontos; [Rotas](https://github.com/bramus/react-native-maps-directions)
+- Também há uma tela de configuração que é possível deslogar do usuário usado na tela de Login;
 
 # Notas:
 - Esse projeto levou 3 semanas , cerca de 70 horas no total.
