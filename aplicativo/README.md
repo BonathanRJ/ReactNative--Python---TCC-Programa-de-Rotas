@@ -27,5 +27,7 @@ https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/1be62a7e-7
 - Dark mode / Light Mode![Uploading splash_screen.svg…]()
 
 - Adicionar pontos de parada parecidos com o do app Uber
-- Montei uma SplashScreen personalizada e gostaria de futuramente incrementar ao app ![splash_screen](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/c9d47fa7-b49f-457d-b50b-740c916a6e23)
+- Montei uma SplashScreen personalizada e gostaria de futuramente incrementar ao app
+ <img align="left" height="450" width="250" 
+  ![splash_screen](https://github.com/BonathanRJ/TCC---Programa-de-Rotas/assets/97456370/c9d47fa7-b49f-457d-b50b-740c916a6e23)/>
 
