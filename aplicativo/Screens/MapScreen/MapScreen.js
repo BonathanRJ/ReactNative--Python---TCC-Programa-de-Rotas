@@ -8,7 +8,7 @@ import styles from './styles';
 import mapStyle from './mapStyle';
 
 // API Google Maps
-const apiKey = 'AIzaSyDnuTzZzxM5ejsgCln6Y2VvSeQWQlrA3G0';
+const apiKey = '';
 
 const MapScreen = ({ route }) => {
   const navigation = useNavigation();
